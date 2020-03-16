@@ -1,4 +1,5 @@
 import React from "react" 
+import TeamName from"./TeamName"
 import PokemonCard1 from "./PokemonCard1"
 import PokemonCard2 from "./PokemonCard2"
 import PokemonCard3 from "./PokemonCard3"
@@ -10,14 +11,7 @@ function PokemonApp(){
         <div>
             <section className="wrapper">
                 <section id="chosen-pokemons">
-                    <div className="team-name">
-                    <h2>choose your team from the pokemons below</h2>
-                        <h2>your team name</h2>
-                        <input type="text" name="teamname" id="teamName" placeholder="What Is Your Team Name?"/>
-                    </div>
-                    <div class="pokemon-team">
-
-                    </div>
+                    <TeamName/>
                 </section>
                 <section id="cards">
                     <PokemonCard1/>
