@@ -31,15 +31,3 @@ function PokemonApp(){
 }
 
 export default PokemonApp
-/* 
-console.log(pokemons.sprites.front_default)
-document.querySelector("img").src = pokemons.sprites.front_default);
-pokemons.name
-pokemons.abilities[0].ability.name
-pokemons.base_experience
-pokemons.moves[0].move.name - there is ALOT
-pokemons.species.name
-pokemons.types[0].type.name
-pokemons.weight
-pokemons.height
-*/
