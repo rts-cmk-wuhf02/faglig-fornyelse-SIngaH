@@ -17,3 +17,11 @@ NU
     jeg har set videoen og er i gang med opgaven
         nu har jeg lavet kortene med at bruge det jeg lært i videoen, men i videoen viste han ikke hvordan man henter fra flere apier ad gangen så jeg behøvede at gætte mig frem til meget og bruge fejl beskederne for at finde frem til en løsning 
         hvis jeg har tid tilbage da jeg er færdig med resten så finder jeg en bedre måde at lave det på, men nu virker det og det er godt nok lige nu
+
+        nu kan man vælge et navn til sit hold
+            da man skriver hold navnet kommer det i en h2er
+
+        nu er jeg i gang med at lave det så man kan vælge pokemons til sit hold - jeg sætter det kun på github når det virker
+
+
+4.47 - cards
