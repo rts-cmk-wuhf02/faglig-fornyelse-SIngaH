@@ -6,10 +6,14 @@ Aflevering:
         Jeg bruger render og fetch via react. jeg bruger også this.state, components, componentDidMount, lifecyle, handleClick og sikkert flere ting jeg ikke ved helt endnu, jeg er stadvæk i gang med videoen.
 
     3. En liste over de ressourcer som har hjulpet dig i processen
-        https://www.youtube.com/watch?v=DLX62G4lc44 - den lærte mig lidt om hvordan react virker. Det er en video hvor man stopper den og laver en opgave så trykker man på play og han viser hvordan man skal lave opgaven. 
+        https://www.youtube.com/watch?v=DLX62G4lc44 - den lærte mig lidt om hvordan react virker. Det er en video hvor man stopper den og laver en opgave så trykker man på play og han viser hvordan man skal lave opgaven. Men i videoen brugte han ikke VSC.
 
-        https://code.visualstudio.com/docs/nodejs/reactjs-tutorial - den viste mig hvordan jeg bruger react i vsc
+        https://code.visualstudio.com/docs/nodejs/reactjs-tutorial - den viste mig hvordan jeg bruger react i VSC
 
         https://pokeapi.co/ - viste mig linken til pokemon APIet
 
-        Måske kommer jeg også til med at google mere da jeg er i gang med  opgaven, men det ved jeg ikke lige nu fordi jeg er stadvæk i gang med at se videoen og læra hvordan man bruger react.
+
+NU
+    jeg har set videoen og er i gang med opgaven
+        nu har jeg lavet kortene med at bruge det jeg lært i videoen, men i videoen viste han ikke hvordan man henter fra flere apier ad gangen så jeg behøvede at gætte mig frem til meget og bruge fejl beskederne for at finde frem til en løsning 
+        hvis jeg har tid tilbage da jeg er færdig med resten så finder jeg en bedre måde at lave det på, men nu virker det og det er godt nok lige nu
