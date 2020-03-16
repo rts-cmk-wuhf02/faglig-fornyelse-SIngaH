@@ -34,7 +34,7 @@ class PokemonCard1 extends Component{
                     <h2>{this.state.name}</h2>
                     <input type="checkbox" name="pick-pokemon" className="pick-pokemon"/>
                 </div>
-                <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png" alt="smtn"/>
+                <img src={this.state.img} alt={this.state.name}/>
                 <div className="basic-info">
                     <p className="weight">weight: {this.state.weight}</p>
                     <p className="species">species: {this.state.species}</p>
