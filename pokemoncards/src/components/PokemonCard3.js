@@ -11,18 +11,21 @@ class PokemonCard3 extends Component{
     }
 
     componentDidMount(){
-        fetch('https://pokeapi.co/api/v2/pokemon/3/')  
+        fetch('https://pokeapi.co/api/v2/pokemon/5/')  
         .then(response => response.json())  
         .then(Pokemon => 
             this.setState({
                 pokemon: [
-                    Pokemon.name,                   //0
-                    Pokemon.sprites.front_default,  //1
-                    Pokemon.weight,                 //2
-                    Pokemon.species.name,           //3
-                    Pokemon.height,                 //4
-                    Pokemon.base_experience         //5
-                ]         })
+                    Pokemon.name,                      //0
+                    Pokemon.sprites.front_default,     //1
+                    Pokemon.weight,                    //2
+                    Pokemon.species.name,              //3
+                    Pokemon.height,                    //4
+                    Pokemon.base_experience,           //5
+                    Pokemon.abilities[0].ability.name, //6
+                    Pokemon.abilities[1].ability.name  //7
+                ]        
+            })
         )
     }
     handleChange(){
@@ -36,7 +39,8 @@ class PokemonCard3 extends Component{
 
     render(){
         const doneStyles ={
-            border:"solid 6px blue"
+            border:"solid 6px blue",
+            backgroundColor: "#20e5ff"
         }
         return(
             <section className="pokemon-card" style={this.state.checked ? doneStyles : null}>
@@ -59,6 +63,12 @@ class PokemonCard3 extends Component{
                     <p className="height">height: {this.state.pokemon[4]}</p>
                     <p className="bs">base experience: {this.state.pokemon[5]}</p>
                 </div>
+                <hr/>
+                <h3>Abilities</h3>
+                <ul>
+                    <li>{this.state.pokemon[6]}</li>
+                    <li>{this.state.pokemon[7]}</li>
+                </ul>
             </section>
         )
     }
