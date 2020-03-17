@@ -24,7 +24,7 @@ class TeamName extends Component{
                     type="text" 
                     name="teamname" 
                     id="teamName" 
-                    placeholder="What Is Your Team Name?"
+                    placeholder="Choose Your Team Name?"
                     value={this.state.teamName}
                     onChange={this.handleChange}
                 />

@@ -4,12 +4,7 @@ class PokemonCard2 extends Component{
     constructor(){
         super()
         this.state = {
-            name: "",
-            img : "",
-            weight: "",
-            height: "",
-            species: "",
-            baseExperience: "",
+            pokemon : [],
             checked: false
         }
         this.handleChange = this.handleChange.bind(this)
@@ -18,14 +13,16 @@ class PokemonCard2 extends Component{
     componentDidMount(){
         fetch('https://pokeapi.co/api/v2/pokemon/2/')  
         .then(response => response.json())  
-        .then(Pokemon1 => 
+        .then(Pokemon => 
             this.setState({
-                name: Pokemon1.name,
-                img : Pokemon1.sprites.front_default,
-                weight: Pokemon1.weight,
-                height: Pokemon1.height,
-                species: Pokemon1.species.name,
-                baseExperience: Pokemon1.base_experience            
+                pokemon: [
+                    Pokemon.name,                   //0
+                    Pokemon.sprites.front_default,  //1
+                    Pokemon.weight,                 //2
+                    Pokemon.species.name,           //3
+                    Pokemon.height,                 //4
+                    Pokemon.base_experience         //5
+                ]          
             })
         )
     }
@@ -45,7 +42,7 @@ class PokemonCard2 extends Component{
         return(
             <section className="pokemon-card" style={this.state.checked ? doneStyles : null}>
                 <div className="name-check">
-                    <h2>{this.state.name}</h2>
+                    <h2>{this.state.pokemon[0]}</h2>
                     <input 
                         type="checkbox" 
                         name="pick-pokemon" 
@@ -54,14 +51,14 @@ class PokemonCard2 extends Component{
                         onChange={this.handleChange}
                     />
                 </div>
-                <img src={this.state.img} alt={this.state.name}/>
+                <img src={this.state.pokemon[1]} alt={this.state.pokemon[0]}/>
                 <div className="basic-info">
-                    <p className="weight">weight: {this.state.weight}</p>
-                    <p className="species">species: {this.state.species}</p>
+                    <p className="weight">weight: {this.state.pokemon[2]}</p>
+                    <p className="species">species: {this.state.pokemon[3]}</p>
                 </div>
                 <div className="basic-info">
-                    <p className="height">height: {this.state.height}</p>
-                    <p className="bs">base experience: {this.state.baseExperience}</p>
+                    <p className="height">height: {this.state.pokemon[4]}</p>
+                    <p className="bs">base experience: {this.state.pokemon[5]}</p>
                 </div>
             </section>
         )
