@@ -15,10 +15,11 @@ class TeamName extends Component{
         })
     }
     render(){
+        let nameOfTeam = this.state.teamName ? this.state.teamName : "Your team name"; 
         return(
             <div className="team-name">
                 <h2>choose your team from the pokemons below</h2>
-                <h2>Your team name: {this.state.teamName}</h2>
+                <h2>{nameOfTeam}</h2>
                 <input 
                     type="text" 
                     name="teamname" 
