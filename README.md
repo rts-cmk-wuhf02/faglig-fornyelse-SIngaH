@@ -1,12 +1,15 @@
 Aflevering:
     1. En kort beskrivelse af det produkt du vil udvikle
-        Jeg laver pokemon kort, og så en sektion hvor man skal vælge hvilke pokemons man skal have på sit hold. Så hvis man trykker på en pokemon kommer den igen inden i den anden sektion. Hvis jeg har mere tid, så finder jeg på mere jeg kan lave med kortene.
+        Jeg laver pokemon kort, og så en sektion hvor man skal vælge hvilke pokemons man skal have på sit hold. Så hvis man trykker på en pokemon bliver kortet blåt og får et check
 
     2. En beskrivelse af den teknologi du vil anvende i udviklingen
-        Jeg bruger render og fetch via react. jeg bruger også this.state, components, componentDidMount, lifecyle, handleClick og sikkert flere ting jeg ikke ved helt endnu, jeg er stadvæk i gang med videoen.
+        Jeg fetcher fra pokemon APIet, for at gøre det skal jeg bruge en lifecycle metoden som hedder componentDidMount.
+        Render bruger jeg til at vise det fra APIet på siden. 
+        Jeg bruger this.state for at gemme informationer som jeg skal bruge for at vise APIets informationer på siden.
+        Jeg bruger components for at koden er mere overskueligt (delt over flere sider), med det bruger man import og export ligesom i javascript. 
 
     3. En liste over de ressourcer som har hjulpet dig i processen
-        https://www.youtube.com/watch?v=DLX62G4lc44 - den lærte mig lidt om hvordan react virker. Det er en video hvor man stopper den og laver en opgave så trykker man på play og han viser hvordan man skal lave opgaven. Men i videoen brugte han ikke VSC.
+        https://www.youtube.com/watch?v=DLX62G4lc44 - den lærte mig lidt om hvordan react virker. Det er en video hvor man stopper den og laver en opgave så trykker man på play og han viser hvordan man skal lave opgaven. Men i videoen brugte han ikke VSC så jeg skal bruge siden nedenfor.
 
         https://code.visualstudio.com/docs/nodejs/reactjs-tutorial - den viste mig hvordan jeg bruger react i VSC
 
@@ -19,9 +22,8 @@ NU
         hvis jeg har tid tilbage da jeg er færdig med resten så finder jeg en bedre måde at lave det på, men nu virker det og det er godt nok lige nu
 
         nu kan man vælge et navn til sit hold
-            da man skriver hold navnet kommer det i en h2er
+            da man skriver hold navnet kommer det i en h2er og erstatter en text som siger your team name
 
-        nu er jeg i gang med at lave det så man kan vælge pokemons til sit hold - jeg sætter det kun på github når det virker
+        nu kan man vælge pokemons til sit hold, da man har valgt en bliver kortet blåt, alt koden var meget anderledes end i videoen så jeg skulle gætte mig meget frem til hvad jeg skulle gøre, så jeg så på en del af videoen igen og rettede koden så det vil passe til mit project
 
-
-4.47 - cards
+        jeg prøvede at gøre koden mindre men kunne kun mindske den lidt
