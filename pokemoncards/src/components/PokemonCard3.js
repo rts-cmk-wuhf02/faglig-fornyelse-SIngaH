@@ -10,10 +10,9 @@ class PokemonCard3 extends Component{
             height: "",
             species: "",
             baseExperience: "",
-            abilities: [],
-            moves: [],
-            types: []
+            checked: false
         }
+        this.handleChange = this.handleChange.bind(this)
     }
 
     componentDidMount(){
@@ -29,13 +28,30 @@ class PokemonCard3 extends Component{
                 baseExperience: Pokemon1.base_experience            })
         )
     }
+    handleChange(){
+        this.setState(prevState =>{
+            return{
+                checked:!prevState.checked
+            }
+        })
+
+    }
 
     render(){
+        const doneStyles ={
+            border:"solid 6px blue"
+        }
         return(
-            <section className="pokemon-card">
+            <section className="pokemon-card" style={this.state.checked ? doneStyles : null}>
                 <div className="name-check">
                     <h2>{this.state.name}</h2>
-                    <input type="checkbox" name="pick-pokemon" className="pick-pokemon"/>
+                    <input 
+                        type="checkbox" 
+                        name="pick-pokemon" 
+                        className="pick-pokemon"
+                        checked={this.state.checked}
+                        onChange={this.handleChange}
+                    />
                 </div>
                 <img src={this.state.img} alt={this.state.name}/>
                 <div className="basic-info">
