@@ -27,3 +27,9 @@ NU
         nu kan man vælge pokemons til sit hold, da man har valgt en bliver kortet blåt, alt koden var meget anderledes end i videoen så jeg skulle gætte mig meget frem til hvad jeg skulle gøre, så jeg så på en del af videoen igen og rettede koden så det vil passe til mit project
 
         jeg prøvede at gøre koden mindre men kunne kun mindske den lidt
+
+        Jeg prøvede igen og denne gang nåede jeg at minske koden ret meget - det gjorde jeg med at lave en anden component hvor alt html som har med kortene at gøre er på et sted
+
+        Jeg lavede en button så nu da man har valgt sit hold navn kan man trykke på en knap og input feltet og knappen fjernes fra siden
+
+        Nu hvis man vælger en pokemon kommer dens navn og billede ovenfor for at bedre vise at man har valgt den
