@@ -75,7 +75,7 @@ h2{
     margin:0;
 }
 hr{
-    border: solid 1px yellow;
+    border: solid 2px yellow;
 }
 .basic-info{
     display: flex;
@@ -86,4 +86,5 @@ hr{
     border:solid 2px yellow;
     margin: 0 7%;
     width: 80%;
+    background-color: coral;
 }

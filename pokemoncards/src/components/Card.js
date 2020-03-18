@@ -6,6 +6,10 @@ function Card(props){
         backgroundColor: "#20e5ff",
         margin:"0"
     }
+    const imgStyle={
+        backgroundColor: "#8cecff",
+        border:"solid 2px blue"
+    }
     return(
         <div>
             <div className="picked">
@@ -23,7 +27,7 @@ function Card(props){
                         onChange={props.elements.handleChange}
                     />
                 </div>
-                <img className="pokemon-img" src={props.elements.img} alt={props.elements.name}/>
+                <img style={props.elements.checked ? imgStyle : null} className="pokemon-img" src={props.elements.img} alt={props.elements.name}/>
                 <div className="basic-info">
                     <p className="weight">weight: {props.elements.weight}</p>
                     <p className="species">species: {props.elements.species}</p>
@@ -32,7 +36,7 @@ function Card(props){
                     <p className="height">height: {props.elements.height}</p>
                     <p className="bs">base experience: {props.elements.base_experience}</p>
                 </div>
-                <hr/>
+                <hr style={props.elements.checked ? imgStyle : null}/>
                 <h3>Abilities</h3>
                 <ul>
                     <li>{props.elements.ability1}</li>
