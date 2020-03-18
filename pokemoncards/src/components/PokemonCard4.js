@@ -39,36 +39,43 @@ class PokemonCard4 extends Component{
     render(){
         const doneStyles ={
             border:"solid 6px blue",
-            backgroundColor: "#20e5ff"
+            backgroundColor: "#20e5ff",
+            margin:"0"
         }
         return(
-            <section className="pokemon-card" style={this.state.checked ? doneStyles : null}>
-                <div className="name-check">
-                    <h2>{this.state.pokemon[0]}</h2>
-                    <input 
-                        type="checkbox" 
-                        name="pick-pokemon" 
-                        className="pick-pokemon"
-                        checked={this.state.checked}
-                        onChange={this.handleChange}
-                    />
+            <div>
+                <div className="picked">
+                    <img style={{display: this.state.checked ? "block" : "none"}} src={this.state.pokemon[1]} alt={this.state.pokemon[0]}/>
+                    <h2 style={{display: this.state.checked ? "block" : "none"}}>{this.state.pokemon[0]}</h2>
                 </div>
-                <img src={this.state.pokemon[1]} alt={this.state.pokemon[0]}/>
-                <div className="basic-info">
-                    <p className="weight">weight: {this.state.pokemon[2]}</p>
-                    <p className="species">species: {this.state.pokemon[3]}</p>
-                </div>
-                <div className="basic-info">
-                    <p className="height">height: {this.state.pokemon[4]}</p>
-                    <p className="bs">base experience: {this.state.pokemon[5]}</p>
-                </div>
-                <hr/>
-                <h3>Abilities</h3>
-                <ul>
-                    <li>{this.state.pokemon[6]}</li>
-                    <li>{this.state.pokemon[7]}</li>
-                </ul>
-            </section>
+                <section className="pokemon-card" style={this.state.checked ? doneStyles : null}>
+                    <div className="name-check">
+                        <h2>{this.state.pokemon[0]}</h2>
+                        <input 
+                            type="checkbox" 
+                            name="pick-pokemon" 
+                            className="pick-pokemon"
+                            checked={this.state.checked}
+                            onChange={this.handleChange}
+                        />
+                    </div>
+                    <img src={this.state.pokemon[1]} alt={this.state.pokemon[0]}/>
+                    <div className="basic-info">
+                        <p className="weight">weight: {this.state.pokemon[2]}</p>
+                        <p className="species">species: {this.state.pokemon[3]}</p>
+                    </div>
+                    <div className="basic-info">
+                        <p className="height">height: {this.state.pokemon[4]}</p>
+                        <p className="bs">base experience: {this.state.pokemon[5]}</p>
+                    </div>
+                    <hr/>
+                    <h3>Abilities</h3>
+                    <ul>
+                        <li>{this.state.pokemon[6]}</li>
+                        <li>{this.state.pokemon[7]}</li>
+                    </ul>
+                </section>
+            </div>
         )
     }
     

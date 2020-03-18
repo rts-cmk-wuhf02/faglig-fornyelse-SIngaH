@@ -13,7 +13,6 @@ body{
 .team-name{
     display:grid;
     place-items:center;
-    margin-bottom:30px;
 }
 .team-name h2{
     padding:0;
@@ -23,6 +22,11 @@ body{
     height: 30px;
     width: 263px;
     font-size: 22px;
+}
+button{
+    margin-top:20px;
+    padding:2px 5px;
+    font-size:16px;
 }
 #cards{
     display:flex;
@@ -35,10 +39,23 @@ body{
     border-radius: 4%;
     padding:12px;
     background-color: tomato;
+    margin-top:50px;
 } 
 .pick-pokemon{
     height: 17px;
     width: 17px;
+}
+.picked{
+    display:flex;
+    justify-content: center;
+}
+.picked img{
+    width: 100px;
+    height: auto;
+}
+.picked h2{
+    padding:32px 0 0 0;
+    text-decoration: underline;
 }
 .name-check{
     display:flex;
@@ -56,7 +73,7 @@ hr{
     flex-direction: row;
     justify-content: space-between;
 }
-img{
+.pokemon-img{
     border:solid 2px yellow;
     margin: 0 7%;
     width: 80%;
