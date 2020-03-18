@@ -4,14 +4,22 @@ class TeamName extends Component{
     constructor(){
         super()
         this.state={
-            teamName: ""
+            teamName: "",
+            display: "block"
         }
         this.handleChange = this.handleChange.bind(this)
+        this.handleSubmit = this.handleSubmit.bind(this)
+
     }
 
     handleChange(event){
         this.setState({
             teamName: event.target.value
+        })
+    }
+    handleSubmit(){
+        this.setState({
+            display: "none"
         })
     }
     render(){
@@ -21,6 +29,7 @@ class TeamName extends Component{
                 <h2>choose your team from the pokemons below</h2>
                 <h2>{nameOfTeam}</h2>
                 <input 
+                    style={{display: this.state.display}}
                     type="text" 
                     name="teamname" 
                     id="teamName" 
@@ -28,6 +37,7 @@ class TeamName extends Component{
                     value={this.state.teamName}
                     onChange={this.handleChange}
                 />
+                <button style={{display: this.state.display}} onClick={this.handleSubmit}>Team Name Chosen</button>
             </div>
         )
     }
