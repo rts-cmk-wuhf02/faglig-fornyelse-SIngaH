@@ -59,7 +59,7 @@ class PokemonCard4 extends Component{
                             onChange={this.handleChange}
                         />
                     </div>
-                    <img src={this.state.pokemon[1]} alt={this.state.pokemon[0]}/>
+                    <img className="pokemon-img" src={this.state.pokemon[1]} alt={this.state.pokemon[0]}/>
                     <div className="basic-info">
                         <p className="weight">weight: {this.state.pokemon[2]}</p>
                         <p className="species">species: {this.state.pokemon[3]}</p>
