@@ -11,8 +11,7 @@ body{
     text-transform: capitalize;
 }
 .team-name{
-    display:grid;
-    place-items:center;
+    text-align:center;
 }
 .team-name h2{
     padding:0;
@@ -22,11 +21,20 @@ body{
     height: 30px;
     width: 263px;
     font-size: 22px;
+    text-align:center;
 }
 button{
-    margin-top:20px;
-    padding:2px 5px;
+    margin:15px 0 0 34px;
+    padding:4px 7px;
     font-size:16px;
+    font-weight:bold;
+    background-color: tomato;
+    border:solid 4px yellow;
+    width:200px;
+}
+.input-btn{
+    display:grid;
+    justify-content: center;
 }
 #cards{
     display:flex;
