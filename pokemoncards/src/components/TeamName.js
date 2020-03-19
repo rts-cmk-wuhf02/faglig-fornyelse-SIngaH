@@ -7,7 +7,7 @@ class TeamName extends Component{
             teamName: "",
             firstName: "",
             textarea:"",
-            display: "block"
+            display: true
         }
         this.handleChange = this.handleChange.bind(this)
         this.handleSubmit = this.handleSubmit.bind(this)
@@ -21,24 +21,30 @@ class TeamName extends Component{
     }
     handleSubmit(){
         this.setState({
-            display: "none"
+            display: !this.state.display
         })
     }
     render(){
-        let nameOfTeam = this.state.firstName ? this.state.firstName + "´s " + this.state.teamName : "Your team name"; 
-        let textarea = this.state.textarea ? this.state.textarea : "Your Team Description"
+        let btnChange = {
+            margin: "15px 0 0 0"
+        }
+        let displayed = this.state.display ? "block" : "none"
         return(       
                 <div className="team-name">
                     <h2 className="choose">choose your team from the pokemons below</h2>
-                    <h2 className="name-of-team">{nameOfTeam}</h2>
-                    <p>{textarea}</p>
+                    <h2 className="name-of-team">
+                        {this.state.firstName ? this.state.firstName + "´s " + this.state.teamName : "Your team name"}
+                    </h2>
+                    <p>
+                        {this.state.textarea ? this.state.textarea : "Your Team Description"}
+                    </p>
                     <div className="input-btn">
                         <input 
                             name="firstName" 
                             value={this.state.firstName} 
                             onChange={this.handleChange}
                             placeholder="Your First Name"
-                            style={{display: this.state.display}}
+                            style={{display: displayed}}
                             id="teamName" 
                         />
                         <input 
@@ -46,7 +52,7 @@ class TeamName extends Component{
                             value={this.state.teamName} 
                             onChange={this.handleChange}
                             placeholder="Choose Your Team Name"
-                            style={{display: this.state.display}}
+                            style={{display: displayed}}
                             id="teamName" 
                         />
                         <textarea
@@ -55,10 +61,13 @@ class TeamName extends Component{
                             value={this.state.textarea}
                             onChange={this.handleChange}
                             placeholder="Team Descripton"
-                            style={{display: this.state.display}}
+                            style={{display: displayed}}
                             id="teamName" 
                         />
-                        <button style={{display: this.state.display}} onClick={this.handleSubmit}>Submit</button>
+                        <button 
+                            style={!this.state.display ? btnChange : null} 
+                            onClick={this.handleSubmit}>{this.state.display ? "Submit" : "Change"}
+                        </button>
                     </div>
                 </div>
         )
