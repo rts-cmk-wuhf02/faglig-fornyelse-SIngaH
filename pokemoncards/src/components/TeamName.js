@@ -68,6 +68,7 @@ class TeamName extends Component{
                         placeholder="Team Descripton"
                         style={{display: displayed}}
                         id="teamName" 
+                        spellcheck="false"
                     />
                     <select 
                         value={this.state.color} 
