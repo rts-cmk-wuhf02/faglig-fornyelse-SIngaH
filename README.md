@@ -33,3 +33,5 @@ NU
         Jeg lavede en button så nu da man har valgt sit hold navn kan man trykke på en knap og input feltet og knappen fjernes fra siden
 
         Nu hvis man vælger en pokemon kommer dens navn og billede ovenfor for at bedre vise at man har valgt den
+
+        jeg prøvede igen at mindske koden med det virkede ikke
