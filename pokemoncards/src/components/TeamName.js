@@ -7,6 +7,7 @@ class TeamName extends Component{
             teamName: "",
             firstName: "",
             textarea:"",
+            color:"",
             display: true
         }
         this.handleChange = this.handleChange.bind(this)
@@ -38,6 +39,10 @@ class TeamName extends Component{
                     <p>
                         {this.state.textarea ? this.state.textarea : "Your Team Description"}
                     </p>
+                    <div className="color-box">
+                        <div style={{backgroundColor: this.state.color}} className="color"></div>
+                        <label>Team Color</label>
+                    </div>
                     <div className="input-btn">
                         <input 
                             name="firstName" 
@@ -64,6 +69,19 @@ class TeamName extends Component{
                             style={{display: displayed}}
                             id="teamName" 
                         />
+                        <select 
+                            value={this.state.color} 
+                            name="color" 
+                            onChange={this.handleChange}
+                            id="teamName" 
+                            style={{display: displayed}}
+                        >
+                            <option value="">-- Choose A Team Color</option>
+                            <option value="#3fff2d">Green</option>
+                            <option value="Red">Red</option>
+                            <option value="#24d7ff">Blue</option>
+                            <option value="#f832ff">Purple</option>
+                        </select>
                         <button 
                             style={!this.state.display ? btnChange : null} 
                             onClick={this.handleSubmit}>{this.state.display ? "Submit" : "Change"}
