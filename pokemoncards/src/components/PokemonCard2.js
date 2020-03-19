@@ -11,7 +11,7 @@ class PokemonCard2 extends Component{
         this.handleChange = this.handleChange.bind(this)
     }
 
-    componentDidMount(){
+    componentWillMount(){
         fetch('https://pokeapi.co/api/v2/pokemon/8/')  
         .then(response => response.json())  
         .then(Pokemon => 

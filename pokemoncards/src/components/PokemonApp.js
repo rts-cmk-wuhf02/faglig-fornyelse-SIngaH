@@ -4,6 +4,7 @@ import PokemonCard1 from "./PokemonCard1"
 import PokemonCard2 from "./PokemonCard2"
 import PokemonCard3 from "./PokemonCard3"
 import PokemonCard4 from "./PokemonCard4"
+import PokemonCard5 from "./PokemonCard5"
 
 
 function PokemonApp(){
@@ -18,6 +19,8 @@ function PokemonApp(){
                     <PokemonCard2/>
                     <PokemonCard3/>
                     <PokemonCard4/>
+                    <PokemonCard5/>
+
                 </section>
             </section>
         </div>
