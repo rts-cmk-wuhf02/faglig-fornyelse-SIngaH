@@ -10,20 +10,28 @@ body{
 }
 #chosen-pokemons{
     font-family: 'Indie Flower', cursive;
-    font-size:25px;
     text-transform: capitalize;
 }
 .team-name{
     text-align:center;
 }
-.team-name h2{
-    padding:0;
+.choose{
+    font-size:36px;
+    padding:0 0 10px 0;
 }
-#teamName{
+.name-of-team{
+    padding:0 0 10px 0;
+    font-size:30px;
+}
+.team-name p{
+    margin:10px 0;
+    font-size:25px;
+}
+#teamName, textarea{
     margin-top:15px;
     height: 30px;
     width: 263px;
-    font-size: 22px;
+    font-size: 20px;
     text-align:center;
 }
 button{

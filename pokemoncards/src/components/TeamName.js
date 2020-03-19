@@ -3,8 +3,10 @@ import React, {Component} from "react"
 class TeamName extends Component{
     constructor(){
         super()
-        this.state={
+        this.state = {
             teamName: "",
+            firstName: "",
+            textarea:"",
             display: "block"
         }
         this.handleChange = this.handleChange.bind(this)
@@ -12,8 +14,9 @@ class TeamName extends Component{
     }
 
     handleChange(event){
+        const {name, value} = event.target
         this.setState({
-            teamName: event.target.value
+            [name]: value
         })
     }
     handleSubmit(){
@@ -22,24 +25,42 @@ class TeamName extends Component{
         })
     }
     render(){
-        let nameOfTeam = this.state.teamName ? this.state.teamName : "Your team name"; 
-        return(
-            <div className="team-name">
-                <h2>choose your team from the pokemons below</h2>
-                <h2>{nameOfTeam}</h2>
-                <div className="input-btn">
-                    <input 
-                        style={{display: this.state.display}}
-                        type="text" 
-                        name="teamname" 
-                        id="teamName" 
-                        placeholder="Choose Your Team Name?"
-                        value={this.state.teamName}
-                        onChange={this.handleChange}
-                    />
-                    <button style={{display: this.state.display}} onClick={this.handleSubmit}>Team Name Chosen</button>
+        let nameOfTeam = this.state.firstName ? this.state.firstName + "´s " + this.state.teamName : "Your team name"; 
+        let textarea = this.state.textarea ? this.state.textarea : "Your Team Description"
+        return(       
+                <div className="team-name">
+                    <h2 className="choose">choose your team from the pokemons below</h2>
+                    <h2 className="name-of-team">{nameOfTeam}</h2>
+                    <p>{textarea}</p>
+                    <div className="input-btn">
+                        <input 
+                            name="firstName" 
+                            value={this.state.firstName} 
+                            onChange={this.handleChange}
+                            placeholder="Your First Name"
+                            style={{display: this.state.display}}
+                            id="teamName" 
+                        />
+                        <input 
+                            name="teamName" 
+                            value={this.state.teamName} 
+                            onChange={this.handleChange}
+                            placeholder="Choose Your Team Name"
+                            style={{display: this.state.display}}
+                            id="teamName" 
+                        />
+                        <textarea
+                            type="text"
+                            name="textarea"
+                            value={this.state.textarea}
+                            onChange={this.handleChange}
+                            placeholder="Team Descripton"
+                            style={{display: this.state.display}}
+                            id="teamName" 
+                        />
+                        <button style={{display: this.state.display}} onClick={this.handleSubmit}>Submit</button>
+                    </div>
                 </div>
-            </div>
         )
     }
 
